@@ -8,7 +8,7 @@ Maven
 # Последовательность запуска
 
 ##  1. Перейдите в папку с проектом
-cd (путь к проекту)/JustSoftTestApplication
+cd (путь к проекту)/ComfortableSoftTestApplication
 
 ##  2. Соберите проект
 mvn clean package
