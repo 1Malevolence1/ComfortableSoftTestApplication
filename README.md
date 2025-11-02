@@ -2,8 +2,8 @@
 
 Нужно установить
 
-Java 21
-Maven
+* Java 21
+* Maven
 
 # Последовательность запуска
 
@@ -16,7 +16,7 @@ mvn clean package
 ##  3. Запустите приложение
 java -jar target/ComfortableSoftTestApplication-0.0.1-SNAPSHOT.jar
 
-Приложение запустится и будет доступно на localhost:8080
+* Приложение будет доступно на localhost:8080
 
 # Проверка
 Swagger UI: http://localhost:8080/swagger-ui.html
