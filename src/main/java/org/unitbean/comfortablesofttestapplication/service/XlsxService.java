@@ -3,7 +3,9 @@ package org.unitbean.comfortablesofttestapplication.service;
 
 import java.io.FileInputStream;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Stream;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
@@ -26,7 +28,7 @@ public class XlsxService {
         xlsxValidator.validateN(n);
         xlsxValidator.validateFile(filePath);
 
-        List<Integer> numbers = readFirstColumn(filePath);
+        Set<Integer> numbers = readFirstColumn(filePath);
 
         xlsxValidator.validateEnoughNumbers(numbers.size(), n);
 
@@ -35,8 +37,8 @@ public class XlsxService {
     }
 
     @SneakyThrows
-    private List<Integer> readFirstColumn(String filePath) {
-        List<Integer> numbers = new ArrayList<>();
+    private Set<Integer> readFirstColumn(String filePath) {
+        Set<Integer> numbers = new HashSet<>();
 
         try (ReadableWorkbook workbook = new ReadableWorkbook(new FileInputStream(filePath))) {
             Sheet sheet = workbook.getSheets().findFirst().orElseThrow();
